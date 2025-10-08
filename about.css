@@ -1,0 +1,385 @@
+@media (max-width: 540px) {
+  .photo img {
+    max-width: 98vw !important;
+    max-height: 260px !important;
+    width: 98vw !important;
+    height: auto !important;
+    display: block;
+    margin: 0 auto;
+  }
+}
+/* General Styles */
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #171717;
+}
+
+nav {
+  position: fixed;
+  isolation: isolate;
+  width: 100%;
+  z-index: 9;
+  background-color: #ff310d;
+  padding: 0.5rem 0;
+  top: 0;
+  left: 0;
+}
+
+/* ...existing code... */
+
+/* Remove or reduce the margin-top on .banner */
+.banner {
+  background-color: #fff;
+  padding: 4rem 2rem;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 1rem;
+  margin: 2rem auto;
+  animation: fadeIn 1s ease-in-out;
+  margin-top: 40px; /* Reduced from 80px to 40px */
+}
+
+/* You can keep or remove this, but it has little effect if nav is fixed at top */
+.nav__header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ff310d;
+  /* margin-top: -10px;  <-- This line can be removed */
+  padding: 0.5rem 1rem;
+}
+
+/* ...existing code... */
+.nav__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.nav__logo .logo-white {
+  max-width: 40px;
+  border-radius: 50px;
+  background: #fff;
+  padding: 0.5rem;
+}
+.nav__logo .logo-dark {
+  display: none;
+  max-width: 80px;
+  border-radius: 50px;
+  background: #fff;
+  padding: 0.5rem;
+}
+
+.nav__menu__btn {
+  font-size: 2.2rem;
+  color: #fff;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0.5rem 0.8rem;
+  margin-left: 0.5rem;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+}
+
+.nav__links {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: rgba(80, 78, 78, 0.953);
+  transition: transform 0.5s;
+  z-index: -1;
+}
+
+.nav__links a {
+  font-weight: 500;
+  color: #fff;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.nav__links.open {
+  transform: translateY(100%);
+}
+
+/* Footer Styles */
+.footer__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 2rem 1rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer__col {
+  flex: 1 1 220px;
+  min-width: 180px;
+  margin-bottom: 1rem;
+}
+
+.footer__col h4 {
+  font-size: 1.2rem;
+  font-family: 'title', sans-serif;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.footer__links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer__links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  margin-bottom: 0.5rem;
+  transition: color 0.2s;
+}
+
+.footer__links a:hover {
+  color: #ff310d;
+}
+
+
+@media (max-width: 768px) {
+  .footer__container {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1.5rem 0.5rem;
+  }
+  .footer__col {
+    min-width: 140px;
+    margin-bottom: 0.5rem;
+  }
+}
+
+
+
+.section__header {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #1b3fa0; /* Red color for the header */
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.section__header::after {
+  content: ""; /* Adds a decorative underline */
+  display: block;
+  width: 50%; /* Adjusts the width of the underline */
+  height: 3px; /* Thickness of the underline */
+  background-color: #454a49; /* Green color for the underline */
+  margin: 0.5rem auto 0; /* Centers the underline and adds spacing */
+}
+
+.photo {
+  display: flex;
+  justify-content: center; /* Centers the images horizontally */
+  align-items: center; /* Centers the images vertically if needed */
+  flex-wrap: wrap; /* Ensures images wrap to the next line if necessary */
+  gap: 1rem; /* Adds spacing between images */
+  margin: 2rem auto; /* Centers the entire section */
+}
+
+
+.photo img {
+  max-width: 98vw;
+  max-height: 420px;
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: block;
+  margin: 0 auto;
+}
+
+.photo img:hover {
+  transform: scale(1.1); /* Slight zoom effect on hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/* Image Collection Grid */
+.banner__image {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Responsive grid for images */
+  gap: 1rem; /* Adds spacing between images */
+  margin: 2rem auto;
+  animation: slideUp 1s ease-in-out; /* Adds slide-up animation */
+}
+
+
+.banner__image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.banner__image img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  max-height: 220px;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  object-fit: cover;
+}
+
+.banner__image img:hover {
+  transform: scale(1.1); /* Slight zoom effect on hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/* Boxed Section Styles */
+.boxed-section {
+  background-color: #fff; /* White background for the boxes */
+  padding: 2rem;
+  margin: 2rem auto;
+  border-radius: 1rem; /* Adds rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+  text-align: left; /* Aligns text to the left */
+  animation: fadeIn 1s ease-in-out; /* Adds fade-in animation */
+}
+
+.boxed-section:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.boxed-section h3 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ec006e; /* Dark green color for the header */
+  margin-bottom: 1rem;
+  text-align: center;
+  text-transform: uppercase; /* Makes the heading uppercase */
+  border-bottom: 3px solid #007bff; /* Adds a bottom border */
+  display: inline-block;
+  padding-bottom: 0.5rem; /* Centers the heading */
+}
+
+.boxed-section h4 {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #9b0606; /* Slightly lighter text color */
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.boxed-section p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #272626;
+  margin-bottom: 1rem;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .section__header {
+    font-size: 2rem; /* Reduces header size for tablets */
+  }
+
+  .banner__image {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Adjusts grid for smaller screens */
+  }
+
+  .boxed-section {
+    padding: 1.5rem;
+  }
+
+  .boxed-section h3 {
+    font-size: 1.8rem;
+  }
+
+  .boxed-section h4 {
+    font-size: 1.2rem;
+  }
+
+  .boxed-section p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 540px) {
+  .banner {
+    padding: 2rem 1rem; /* Reduces padding for smaller screens */
+  }
+
+  .section__header {
+    font-size: 1.8rem; /* Further reduces header size for mobile */
+  }
+
+  .banner__image img {
+    max-width: 90%;
+    max-height: 140px;
+  }
+
+  .boxed-section {
+    padding: 1rem;
+  }
+
+  .boxed-section h3 {
+    font-size: 1.6rem;
+  }
+
+  .boxed-section h4 {
+    font-size: 1rem;
+  }
+
+  .boxed-section p {
+    font-size: 0.8rem;
+  }
+}
+
+.banner {
+  background-color: #fff; /* White background for the banner */
+  padding: 4rem 2rem;
+  text-align: center; /* Centers all content */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+  border-radius: 1rem; /* Adds rounded corners */
+  margin: 2rem auto; /* Centers the banner */
+  animation: fadeIn 1s ease-in-out; /* Adds fade-in animation */
+  margin-top: 80px; /* Pushes banner below fixed nav */
+}

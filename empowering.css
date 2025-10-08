@@ -1,0 +1,278 @@
+/* General Styles */
+body {
+  font-family: 'Poppins', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #171717;
+}
+
+nav {
+  position: fixed;
+  isolation: isolate;
+  width: 100%;
+  z-index: 9;
+  background-color: #ff310d;
+  padding: 0.5rem 0;
+  top: 0;
+  left: 0;
+}
+
+.nav__header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ff310d;
+    margin-top: -10px;
+
+  padding: 0.5rem 1rem;
+}
+
+.nav__logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.nav__logo .logo-white {
+  max-width: 40px;
+  border-radius: 50px;
+  background: #fff;
+  padding: 0.5rem;
+}
+.nav__logo .logo-dark {
+  display: none;
+  max-width: 80px;
+  border-radius: 50px;
+  background: #fff;
+  padding: 0.5rem;
+}
+
+.nav__menu__btn {
+  font-size: 2.2rem;
+  color: #fff;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0.5rem 0.8rem;
+  margin-left: 0.5rem;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+}
+
+.nav__links {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: rgba(80, 78, 78, 0.953);
+  transition: transform 0.5s;
+  z-index: -1;
+}
+
+.nav__links a {
+  font-weight: 500;
+  color: #fff;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.nav__links.open {
+  transform: translateY(100%);
+}
+
+/* Footer Styles */
+.footer__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 2rem 1rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer__col {
+  flex: 1 1 220px;
+  min-width: 180px;
+  margin-bottom: 1rem;
+}
+
+.footer__col h4 {
+  font-size: 1.2rem;
+  font-family: 'title', sans-serif;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.footer__links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer__links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  margin-bottom: 0.5rem;
+  transition: color 0.2s;
+}
+
+.footer__links a:hover {
+  color: #ff310d;
+}
+
+
+
+@font-face {
+  font-family: 'buttons';
+  src: url('fonts/LTSoul-Bold.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'title';
+  src: url('fonts/Pianaforma.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+.section__header::after {
+  content: ""; /* Adds a decorative underline */
+  display: block;
+  width: 40%; /* Adjusts the width of the underline */
+  height: 4px; /* Thickness of the underline */
+  background-color: #fe25a4; /* Green color for the underline */
+  margin: 0.5rem auto 0; /* Centers the underline and adds spacing */
+}
+
+/* Banner Section */
+.banner {
+  background-color: #fff; /* White background for the banner */
+  padding: 4rem 2rem;
+  text-align: center; /* Centers all content */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+}
+
+.section__header {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #0414c4; /* Dark green color for the header */
+  margin-bottom: 1rem;
+}
+.banner__content span {
+  color: #fe25a4;         /* Example: red color */
+  font-weight: bold;      /* Makes the text bold */
+  font-family: 'Poppins', Arial, sans-serif; /* Example font */
+  letter-spacing: 0.5px;  /* Optional: adds a little spacing */
+  font-size: 1.08em;      /* Slightly larger text */
+}
+.banner__image {
+  margin: 2rem auto; /* Centers the image */
+}
+
+.banner__image img {
+  max-width: 60%; /* Reduces the image size to 60% of its container */
+  border-radius: 1rem; /* Adds rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+}
+
+.banner__content {
+  margin-top: 2rem;
+  text-align: left; /* Aligns text to the left */
+}
+.banner__content h3 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #0414c4;
+  margin-bottom: 1rem;
+}
+
+.banner__content h4 {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #0414c4; /* Slightly lighter text color */
+  margin-bottom: 1.5rem;
+}
+
+.banner__content p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #3b3b3b;
+  margin-bottom: 1.5rem;
+}
+
+.banner__content h5 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #0414c4;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .section__header {
+    font-size: 2rem; /* Reduces header size for tablets */
+  }
+
+  .banner__image img {
+    max-width: 80%; /* Further reduces image size for tablets */
+  }
+
+  .banner__content h3 {
+    font-size: 1.6rem;
+  }
+
+  .banner__content h4 {
+    font-size: 1rem;
+  }
+
+  .banner__content p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 540px) {
+  .banner {
+    padding: 2rem 1rem; /* Reduces padding for smaller screens */
+  }
+
+  .section__header {
+    font-size: 1.8rem; /* Further reduces header size for mobile */
+  }
+
+  .banner__image img {
+    max-width: 90%; /* Ensures the image fits smaller screens */
+  }
+
+  .banner__content h3 {
+    font-size: 1.4rem;
+  }
+
+  .banner__content h4 {
+    font-size: 0.9rem;
+  }
+
+  .banner__content p {
+    font-size: 0.8rem;
+  }
+
+  .banner__content h5 {
+    font-size: 1rem;
+  }
+}
